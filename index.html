@@ -1,28 +1,23 @@
-<html>
-    <body>
-        <form onsubmit="saveToLocalStorage(event)">
-            <label>Name</label>
-            <input type="text"  name="username" required/>
-            <label>EMAIL ID</label>
-            <input type="email"  name="emailId" required/>
-            <label>Phone number</label>
-            <input type="tel"  name="phonenumber" />
-        <button>submit</button>    
-        </form>
-        <SCRIPT>
-            function saveToLocalStorage(event)
-            {
-                event.preventDefault();
-                const name=event.target.username.value;
-                const email=event.target.emailId.value;
-                const phonenumber=event.target.phonenumber.value;
-                localStorage.setItem('name', name);
-                localStorage.setItem('email', email);
+<title>objects in local storage-jvascript-dcode</title>
+<link rel="stylesheet" href="http://youtube.local/assets/dcode.css">
+<link rel="shortcut icon"  href="https://youtube.local/assets/favicon.ico">
 
-                localStorage.setItem('phonenumber', phonenumber);
+<style media="screen">
 
+</style>
 
-            }
-        </SCRIPT>
-    </body>
-</html>
+<body>
+    <h2 id="title">objects in local storage-jvascript-dcode</h2>
+</body>
+<script type="text/javascript">
+    let myObj={
+        name:"Domenic",
+        age:56
+    };
+
+    let myObj_serialized=JSON.stringify(myObj);
+    localStorage.setItem("myObj",myObj_serialized);
+    let myObj_deserialized=JSON.parse(localStorage.getItem("myObj"));
+
+    console.log(myObj_deserialized)
+</script>
