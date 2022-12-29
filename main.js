@@ -1,3 +1,17 @@
-let age=30;
-console.log(age);
 
+
+
+
+function abc() {
+
+    console.log(a);
+    
+    }
+    
+    
+    
+    var a = 7;
+    
+    abc();
+    
+    
